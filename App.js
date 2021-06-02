@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Alert } from 'react-native';
 import Header from './components/Header';
 import ListItem from './components/ListItem';
 import AddItem from './components/AddItem';
@@ -18,20 +18,28 @@ const App = () => {
     else {
       setItems(prevItems => {
         setText("");
-        return (
-          [{ id: '_' + Math.random().toString(36).substr(2, 9), text }, ...prevItems]
-        );
-      })
+        return [
+          { id: '_' + Math.random().toString(36).substr(2, 9), text }, ...prevItems
+        ];
+      });
     }
   }
 
   const updateItem = (text) => {
-    setItems(prevItems => prevItems.map((item) => {
-      item.id === currentItem ? { id: currentItem, text } : item
-    }));
-    setText("");
+    if (!text)
+      return Alert.alert('Error', 'Please Enter a proper Item Name', [
+        {
+          text: 'Ok',
+        },
+      ]);
+
+    setItems(prevItems =>
+      prevItems.map((item) =>
+        item.id === currentItem ? { id: currentItem, text } : item
+      ));
+    setText('');
     setEditing(false);
-  }
+  };
 
   const editItem = (id, text) => {
     setEditing(true);
