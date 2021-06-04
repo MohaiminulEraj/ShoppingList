@@ -8,7 +8,7 @@ const ListItem = ({ item, deleteItem, editItem }) => {
             <View style={styles.listItemView}>
                 <Text style={styles.listItemText}>{item.text}</Text>
                 <View style={styles.listItemBtn}>
-                    <Icon name="edit" size={20} onPress={() => editItem(item.id, item.text)} />
+                    <Icon name="edit" style={{ marginRight: 7 }} size={20} onPress={() => editItem(item.id, item.text)} />
                     <Icon name="remove" size={20} color="firebrick" onPress={() => deleteItem(item.id)} />
                 </View>
             </View>

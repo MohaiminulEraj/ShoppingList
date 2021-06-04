@@ -3,7 +3,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 
 import HomeStackNavigator from '../Home/HomeStackNavigator';
-// import AboutStackNavigator from '../About/AboutStackNavigator';
+import AboutStackNavigator from '../About/AboutStackNavigator';
 
 const Drawer = createDrawerNavigator();
 
@@ -12,7 +12,7 @@ const DrawerNavigator = () => {
         <NavigationContainer>
             <Drawer.Navigator>
                 <Drawer.Screen name="Home" component={HomeStackNavigator} />
-                {/* <Drawer.Screen name="About" component={AboutStackNavigator} /> */}
+                <Drawer.Screen name="About" component={AboutStackNavigator} />
             </Drawer.Navigator>
         </NavigationContainer>
     );
