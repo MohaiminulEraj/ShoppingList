@@ -19,8 +19,8 @@ const AboutStackNavigator = (props) => (
                 headerLeft: () => <Hamburger drawerObj={props}></Hamburger>,
             }}
         />
-        <Stack.Screen name="About2" component={About2} />
-        <Stack.Screen name="About3" component={About3} />
+        <Stack.Screen name="About The App" component={About2} />
+        <Stack.Screen name="About Developer" component={About3} />
     </Stack.Navigator>
 );
 

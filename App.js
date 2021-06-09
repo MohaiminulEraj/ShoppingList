@@ -1,10 +1,14 @@
 import React from 'react';
 import 'react-native-gesture-handler';
-
-import DrawerNavigator from './components/Drawer/DrawerNavigator';
+import AuthStackNavigator from './components/Authentication/AuthStackNavigator';
+// import DrawerNavigator from './components/Drawer/DrawerNavigator';
 
 const App = () => {
-  return <DrawerNavigator></DrawerNavigator>;
-};
+  return (
+    <AuthStackNavigator></AuthStackNavigator>
+  );
+}
+// <DrawerNavigator></DrawerNavigator>;
+
 
 export default App;

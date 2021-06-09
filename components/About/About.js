@@ -10,14 +10,14 @@ const About = (props) => {
             {/* <Text>About</Text> */}
             <Button
                 onPress={() => {
-                    navigateTo(props, 'About2');
+                    navigateTo(props, 'About The App');
                 }}>
                 <Text>About The App</Text>
             </Button>
 
             <Button
                 onPress={() => {
-                    navigateTo(props, 'About3');
+                    navigateTo(props, 'About Developer');
                 }}>
                 <Text>About Developer</Text>
             </Button>
